@@ -36,6 +36,8 @@ if ($opts->{config} and not -e $opts->{config}) {
   my $conf     = Config::Tiny->read($opts->{config});
   my $app_conf = $conf->{$opts->{app}};
 
+  $app_conf->{description} =~ s/"/'/g;
+
   @params{keys %{$app_conf}} = values %{$app_conf};
   say "Loaded desciptions and urls for $opts->{app}";
 }
