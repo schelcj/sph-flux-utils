@@ -8,8 +8,8 @@ use File::Slurp qw(write_file);
 use autodie qw(:filesys);
 use Config::Tiny;
 
-my $CAC_INCLUDES    = q{/home/software/systems/module-lib/cac-modules.tcl};
-my $SPH_PATH        = q{/home/software/rhel6/sph};
+my $CAC_INCLUDES    = q{/usr/cac/rhel6/Modules/lib/cac-modules.tcl};
+my $SPH_PATH        = q{/usr/cac/rhel6/sph};
 my $MODULEFILE_PATH = qq{$SPH_PATH/Modules/modulefiles};
 my $FILE_MODE       = oct('0664');
 my $DIR_MODE        = oct('2775');
